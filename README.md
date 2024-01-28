@@ -23,3 +23,6 @@ The only device type supported is CD Player.  You can easily add what need in th
 
 ## Disclaimer
 This software is offered for free use without any warranty.  It may damage your equipment and/or media.  Your cd may get scratched and your tapes may get broken.
+
+## More
+Good reference about protocol : https://github.com/jcj83429/jvc_compulink
