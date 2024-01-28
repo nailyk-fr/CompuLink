@@ -26,7 +26,7 @@ def main(argv):
     compulinkCommand = int(compulinkCommand)
 
     #setup compulink
-    mycompulink = compulink.CompuLink(18, compulinkTargetAddress)
+    mycompulink = compulink.CompuLink(24, compulinkTargetAddress)
     mycompulink.debug = options.debug
 
     mycompulink.sendCommand(compulinkCommand)

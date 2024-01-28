@@ -10,8 +10,8 @@ class CompuLink(object):
         self.pin = pin
         self.address = address
         # setup GPIO
-        GPIO.setmode(GPIO.BOARD)
-        GPIO.setup(pin, GPIO.OUT)
+        GPIO.setmode(GPIO.BCM)
+        GPIO.setup(self.pin, GPIO.OUT)
 
     def cleanup(self):
         # cleanup GPIO

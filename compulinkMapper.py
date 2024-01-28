@@ -6,9 +6,12 @@ import compulink
 import time
 
 
+COMPULINK_PIN = 24
+COMPULINK_ADDR = 1
+
 def main(argv):
     # setup compulink
-    mycompulink = compulink.CompuLink(18, 1)
+    mycompulink = compulink.CompuLink(COMPULINK_PIN, COMPULINK_ADDR)
     mycompulink.debug = 1
     for address in range(1,16):
         mycompulink.address = address
