@@ -19,7 +19,7 @@ class CompuLink(object):
 
     def pulse0(self):
         if self.debug > 1:
-            print "pulsing 0"
+            print("pulsing 0")
         GPIO.output(self.pin, 1)
         time.sleep(.005)
         GPIO.output(self.pin, 0)
@@ -27,7 +27,7 @@ class CompuLink(object):
 
     def pulse1(self):
         if self.debug > 1:
-            print "pulsing 1"
+            print("pulsing 1")
         GPIO.output(self.pin, 1)
         time.sleep(.005)
         GPIO.output(self.pin, 0)
@@ -35,17 +35,18 @@ class CompuLink(object):
 
     def pulseStop(self):
         if self.debug > 1:
-            print "pulsing stop"
+            print("pulsing stop")
         GPIO.output(self.pin, 1)
         time.sleep(.005)
         GPIO.output(self.pin, 0)
         time.sleep(.028)
 
     def sendCommand(self, compulinkCommand, compulinkaddress=None):
+        #GPIO.setup(self.pin, GPIO.OUT)
         if not compulinkaddress:
             compulinkaddress = self.address
         if self.debug:
-            print "Sending address: " + str(self.address) + " command: " + str(compulinkCommand)
+            print("Sending address: " + str(self.address) + " command: " + str(compulinkCommand))
         # send address
         for x in [8, 4, 2, 1]:
             if 0 != compulinkaddress & x:

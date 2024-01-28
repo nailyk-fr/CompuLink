@@ -14,11 +14,11 @@ def main(argv):
 
     compulinkTargetAddress = options.address
     if not compulinkTargetAddress:
-        print >> sys.stderr, p.get_usage()
+        sys.stderr.write(p.get_usage())
         return 1
     compulinkCommand = options.command
     if not compulinkCommand:
-        print >> sys.stderr, p.get_usage()
+        sys.stderr.write(p.get_usage())
         return 1
 
     compulinkTargetAddress = int(compulinkTargetAddress)
